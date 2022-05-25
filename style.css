@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+
+body{
+    background-color:rgb(37, 36, 34);
+}
+
+/*setting nav size and attaching it to the bottom of the page*/
+.nav{
+    position: fixed;
+    right: 16vw;
+    left: 16vw;
+    bottom:0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background-color:  #e3e3e2;
+    border-style: solid;
+    border-color: #ffffff;
+    border-top-right-radius: 4rem;
+    border-top-left-radius: 4rem;
+    padding-right: 1.3rem;
+}
+
+/*organizeing the stuff inside the nav*/
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: baseline;
+}
+
+a{
+    color:#ffffff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+
+}
+
+.li-icon{
+    position: absolute;
+    background: rgb(255, 217, 13);
+    background: linear-gradient(65deg, rgba(255, 217, 13, 1) 32%, rgba(231, 118, 29, 1) 89%);
+    font-size: 50px;
+    padding: 0.3rem;
+    border-style: solid;
+    border-radius: 2rem;
+    border-width: 0.1rem;
+    margin-top: -1rem;
+    z-index: 1;
+
+}
+
+.li-icon:hover{
+    transition: 1s;
+    transform:translateY(-2.5rem);
+}
+
+.li-text{
+    position: relative;
+    font-size: 20px;
+    color:  black;
+    margin-bottom: 0.5rem;
+    z-index: 0;
+}
+
+/*making the navbar responsive for smaller devices*/
+@media screen and (max-width:700px) {
+    .nav{
+        right:0;
+        left:0;
+        margin-bottom: -5vw;
+        padding-right: 2rem;
+    }
+    .li-icon{
+        position: relative;
+        font-size:1.7em;
+    }
+    .li-text{
+        position: fixed;
+        font-size: 15px;
+    }
+}
